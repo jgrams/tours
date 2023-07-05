@@ -4,7 +4,7 @@
     {{- block "map-script" . }}{{- end }}
     <body class="{{ .Kind }} {{ .Layout }}">
         {{- partial "header.html" . -}}
-        <main class="container">
+        <main>
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "footer.html" . -}}

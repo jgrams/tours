@@ -1,0 +1,9 @@
+{{ partial "maps/map" . }}
+<script>
+    async function fetchMapData() {
+        const response = await fetch({{ . }});
+        const mapData = await response.json();
+        populateMap(mapData);
+    }
+    fetchMapData();
+</script>

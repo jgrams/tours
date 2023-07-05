@@ -1,0 +1,29 @@
+<div class="grid edit-grid">
+  {{ partial "create/edit-map-locations.html" . }}
+  <div>Title:</div>
+  <input id="initialTitle" type="text"/>
+  <h2 class="double-width"></h2>
+  <button class="double-width" id="setCenterMap" onclick="setTitle()">
+    Set Map Title
+  </button>
+  <div>
+    Starting Latitude:
+    <div id="initialLocationLat"></div>
+  </div>
+  <div>
+    Starting Longitude:
+    <div id="initialLocationLong"></div>
+  </div>
+  <button class="double-width" id="setCenterMap" onclick="setCenterMap()">
+    Set Map's Location
+  </button>
+  <div class="double-width">
+    Starting Zoom:
+    <div id="initialLocationZoom"></div>
+  </div>
+  <button class="double-width" id="setInitialZoom" onclick="setInitialZoom()">
+    Set Map's Zoom
+  </button>
+</div>
+
+<div id="location-template" class="no-visiblity location"></div>

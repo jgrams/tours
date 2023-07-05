@@ -1,5 +1,5 @@
 ---
-title: I love my website.
+title: Free Chicago Tours
 ---
 ![Header Image Of Your Website](images/header.jpg)
 

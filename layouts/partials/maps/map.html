@@ -1,0 +1,24 @@
+<div id="map"></div>
+<script>
+  var map = L.map("map");
+  function populateMap(mapData) {
+    map.setView(
+      [mapData.initialLocation.lat, mapData.initialLocation.lng],
+      mapData.initialLocation.zoom
+    );
+    mapData.locations.forEach((mapLocation) => {
+      addLocationToMap(mapLocation);
+    });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+  }
+
+  function addLocationToMap(mapLocation) {
+    L.marker([mapLocation.location.lat, mapLocation.location.lng])
+    .bindPopup(mapLocation.short)
+    .addTo(map);
+  }
+</script>

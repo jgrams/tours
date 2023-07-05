@@ -1,0 +1,81 @@
+{{ partial "maps/empty-map-location" . }} {{ partial "maps/map.html" }} {{
+partial "create/edit-map-form" . }}
+<script>
+  const storageName = "createMap";
+  let mapData = null;
+
+  //Edit Front End Functions
+  function updateFrontEndZoom(data) {
+    document.getElementById("initialLocationZoom").innerHTML = data;
+  }
+
+  function updateObjectZoom(data) {
+    mapData.initialLocation.zoom = data;
+    saveData();
+  }
+
+  function updateFrontEndInitialLocation(data) {
+    document.getElementById("initialLocationLat").innerHTML = data.lat;
+    document.getElementById("initialLocationLong").innerHTML = data.lng;
+  }
+
+  function updateObjectLocation(data) {
+    mapData.initialLocation.lat = data.lat;
+    mapData.initialLocation.lng = data.lng;
+    saveData();
+  }
+
+  function updateFrontEndLocationList(locations) {
+    const template = document.getElementById("location_");
+    locations.forEach((location, index) => {
+        let copy = template.cloneNode(true);
+        copy.id = copy.id + index;
+        console.log(copy);
+    });
+  }
+
+  function populateEditForm(data) {
+    updateFrontEndInitialLocation(data.initialLocation);
+    updateFrontEndZoom(data.initialLocation.zoom);
+    updateFrontEndLocationList(data.locations);
+  }
+
+  // User Interaction Functions
+  function setCenterMap() {
+    let currentCenter = map.getCenter();
+    updateFrontEndInitialLocation(currentCenter);
+    updateObjectLocation(currentCenter);
+  }
+
+  function setInitialZoom() {
+    let currentZoom = map.getZoom();
+    updateFrontEndZoom(currentZoom);
+    updateObjectZoom(currentZoom);
+  }
+
+
+  function createLocationNode() {
+
+
+    }
+
+  function saveData() {
+    localStorage.setItem(storageName, JSON.stringify(mapData));
+  }
+
+  // Initial Map Setup
+  async function fetchMapData() {
+    if (!localStorage.getItem(storageName)) {
+      const response = await fetch("/templates/new-map.json");
+      mapData = await response.json();
+      localStorage.setItem(storageName, JSON.stringify(mapData));
+      populateMap(mapData);
+      populateEditForm(mapData);
+    } else {
+      mapData = JSON.parse(localStorage.getItem(storageName));
+      populateMap(mapData);
+      populateEditForm(mapData);
+    }
+  }
+  fetchMapData();
+</script>
