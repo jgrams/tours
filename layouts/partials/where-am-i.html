@@ -1,0 +1,27 @@
+<div class="flex">
+  <button id="locateMe" onclick="">Locate Me</button>
+</div>
+<script>
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+
+  function success(pos) {
+    const crd = pos.coords;
+    map.setView([crd.latitude, crd.longitude], 17);
+    
+  }
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+
+  const button = document.getElementById("locateMe");
+
+  button.addEventListener("click", (event) => {
+    navigator.geolocation.getCurrentPosition(success, error, options);
+  });
+
+</script>

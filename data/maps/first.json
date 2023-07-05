@@ -1,0 +1,34 @@
+{
+    "title": "First Tour",
+    "Short Description": "My favorite gems in downtown Chicago.",
+    "initialLocation": {
+        "lat": "41.8772",
+        "long": "-87.6087"
+    },
+    "locations": [
+        {
+            "location":  {
+                "lat": "41.88807366856188",
+                "long": "-87.63525918537786"
+            },
+            "title": "The Merchandise Mart",
+            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a magnificent tassel store and the most well numbered staircase in the world.",
+            "long": "",
+            "tags": [
+                "food"
+            ]
+        },
+        {
+            "location":   {
+                "lat": "41.88807366856188",
+                "long": "-87.63525918537786"
+            },
+            "title": "The Merchandise Mart",
+            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a magnificent tassel store and the most well staircase in the world.",
+            "long": "",
+            "tags": [
+                "food"
+            ]
+        }
+    ]
+}
