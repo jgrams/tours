@@ -1,0 +1,30 @@
+<div id="currentMapLocations" class="double-width edit-grid"></div>
+<script>
+  const currentLocationsContainer = document.getElementById(
+    "currentMapLocations"
+  );
+  function addAllInitialLocations(locations) {
+    locations.forEach((location, index) => {
+      createLocationDisplayElement(location, index);
+    });
+  }
+
+  function createLocationDisplayElement(location, index) {
+    let copy = currentLocationsTemplate.cloneNode(true);
+    addIndexToId(copy, index);
+    for (element of copy.children) {
+      addIndexToId(element, index);
+      addTextToElement(element, location);
+    };
+    currentLocationsContainer.appendChild(copy);
+  }
+
+  function addTextToElement(element, location) {
+    let dataKey = element.dataset.objectKey;
+    element.innerText = location[dataKey];
+  }
+
+  function addIndexToId(element, index) {
+    element.id = element.id + index;
+  }
+</script>

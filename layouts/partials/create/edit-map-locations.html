@@ -2,7 +2,7 @@
 <button class="double-width" id="addLocation" onclick="enableAddLocation()">
   Add a Location
 </button>
-<form id="newLocationForm" class="edit-grid double-width" display="none">
+<form id="newLocationForm" class="edit-grid double-width display-none">
     <input type="checkbox" id="locationAdded" name="locationAdded" required />
     <label for="locationAdded">Click the map to add a location.</label>
   <label for="title">Name:</label>
@@ -30,5 +30,7 @@
 </form>
 <div class="double-width" id="currentLocations"></div>
 <script>
-  function enableAddLocation() {}
+  function enableAddLocation() {
+    document.getElementById("newLocationForm").classList.remove("display-none");
+}
 </script>

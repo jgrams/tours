@@ -3,6 +3,7 @@ partial "create/edit-map-form" . }}
 <script>
   const storageName = "createMap";
   let mapData = null;
+  const currentLocationsTemplate = document.getElementById("location_");
 
   //Edit Front End Functions
   function updateFrontEndZoom(data) {
@@ -25,19 +26,10 @@ partial "create/edit-map-form" . }}
     saveData();
   }
 
-  function updateFrontEndLocationList(locations) {
-    const template = document.getElementById("location_");
-    locations.forEach((location, index) => {
-        let copy = template.cloneNode(true);
-        copy.id = copy.id + index;
-        console.log(copy);
-    });
-  }
-
   function populateEditForm(data) {
     updateFrontEndInitialLocation(data.initialLocation);
     updateFrontEndZoom(data.initialLocation.zoom);
-    updateFrontEndLocationList(data.locations);
+    addAllInitialLocations(data.locations);
   }
 
   // User Interaction Functions
@@ -53,11 +45,7 @@ partial "create/edit-map-form" . }}
     updateObjectZoom(currentZoom);
   }
 
-
-  function createLocationNode() {
-
-
-    }
+  function createLocationNode() {}
 
   function saveData() {
     localStorage.setItem(storageName, JSON.stringify(mapData));

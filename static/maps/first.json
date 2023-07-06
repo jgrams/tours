@@ -9,22 +9,17 @@
     },
     "locations": [
         {
-            "location": {
-                "lat": "41.88807366856188",
-                "lng": "-87.63525918537786"
-            },
+            "lat": "41.88807366856188",
+            "lng": "-87.63525918537786",
             "title": "The Merchandise Mart",
-            "id": "merch-mart",
-            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a magnificent tassel store and the most well numbered staircase in the world.",
+            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a magnificent tassel store, office furnature fire sales, and the most perfectly numbered staircase in the world.",
             "tags": [
                 "places"
             ]
         },
         {
-            "location": {
-                "lat": "41.89025875682677",
-                "lng": "-87.62368653332975"
-            },
+            "lat": "41.89025875682677",
+            "lng": "-87.62368653332975",
             "title": "Tribune Tower",
             "short": "Tribune Tower has stones from around the world embedded in the building. See and touch the whole world in a single city block.",
             "tags": [

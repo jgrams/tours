@@ -17,7 +17,7 @@
   }
 
   function addLocationToMap(mapLocation) {
-    L.marker([mapLocation.location.lat, mapLocation.location.lng])
+    L.marker([mapLocation.lat, mapLocation.lng])
     .bindPopup(mapLocation.short)
     .addTo(map);
   }

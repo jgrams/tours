@@ -1,7 +1,9 @@
 <div class="grid edit-grid">
   {{ partial "create/edit-map-locations.html" . }}
-  <div>Title:</div>
-  <input id="initialTitle" type="text"/>
+  {{ partial "maps/current-map-locations.html" . }}
+  <h2 class="double-width">Map Defaults</h2>
+  <div>Map Title:</div>
+  <input class="double-width" id="initialTitle" type="text"/>
   <h2 class="double-width"></h2>
   <button class="double-width" id="setCenterMap" onclick="setTitle()">
     Set Map Title
@@ -15,15 +17,13 @@
     <div id="initialLocationLong"></div>
   </div>
   <button class="double-width" id="setCenterMap" onclick="setCenterMap()">
-    Set Map's Location
+    Set Map Starting Location
   </button>
   <div class="double-width">
     Starting Zoom:
     <div id="initialLocationZoom"></div>
   </div>
   <button class="double-width" id="setInitialZoom" onclick="setInitialZoom()">
-    Set Map's Zoom
+    Set Map's Starting Zoom
   </button>
 </div>
-
-<div id="location-template" class="no-visiblity location"></div>
