@@ -7,9 +7,9 @@ theme = "base"
     [markup.goldmark.renderer]
       unsafe = true
 [params]
-  description = "Free tours of Chicago."
-  title = "My Basic Website"
+  description = "Free Chicago tours from this no-app local guide. Get a text or audio tour on your phone without installing anything."
+  title = "Chicago Local Tours"
   headerImage  = "images/header.png"
-  author = "Tough Pixels"
+  author = "Free Tours in Chicago"
   imageSizes = "1280 768 640 320"
   imageFormats = "webp jpeg"

@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'Garamond';
+    src: url(/fonts/EBGaramond-VariableFont_wght.ttf);
+}
+
 body {
     display: grid;
     justify-content: center;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    grid-gap: .2rem;
+    padding: 12px;
+    grid-gap: .2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Garamond', 'system-ui', 'serif';
 }
 
 html {
@@ -15,13 +23,14 @@ html {
 #map {
     min-height: 180px;
     height: 80vh;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .edit-grid {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
-    grid-gap: .2rem;
+    grid-gap: .6em;
 }
 
 .double-width {

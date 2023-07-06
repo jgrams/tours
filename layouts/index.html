@@ -3,12 +3,13 @@
 <div>{{ .Content }}</div>
 {{ partial "maps/map-view" "/maps/first.json" }}
 <ul>
-  {{ range .Pages }}
+  {{ with .GetPage "create/tour-map" }}
   <li>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
   </li>
   {{ end }}
 </ul>
-{{- end }} {{- define "map-script" }}
+{{- end }} 
+{{- define "map-script" }}
  {{ partial "scripts/map-javascript-loader.html" . }}
 {{- end }}

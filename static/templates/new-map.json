@@ -1,6 +1,6 @@
 {
     "title": "Tour",
-    "Short Description": "What I Like in Chicago.",
+    "Short Description": "The kind of stuff, and what I like in Chicago.",
     "initialLocation": {
         "lat": "41.8772",
         "lng": "-87.6087",
@@ -11,19 +11,13 @@
             "lat": "41.88807366856188",
             "lng": "-87.63525918537786",
             "title": "The Merchandise Mart",
-            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a magnificent tassel store and the most well numbered staircase in the world.",
-            "tags": [
-                "food"
-            ]
+            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a tassel store and the most well numbered staircase in the world."
         },
         {
             "lat": "41.89025875682677",
             "lng": "-87.62368653332975",
             "title": "Tribune Tower",
-            "short": "Tribune Tower has stones from around the world embedded in the building. See and touch the whole world in a single city block.",
-            "tags": [
-                "places"
-            ]
+            "short": "Tribune Tower has stones from around the world embedded in the building. See and touch the whole world in a single city block."
         }
     ]
 }

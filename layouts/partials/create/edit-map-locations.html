@@ -1,16 +1,53 @@
 <h2 class="double-width">Locations</h2>
-<button class="double-width" id="addLocation" onclick="enableAddLocation()">
+<button class="double-width" id="addLocationButton" onclick="enableAddLocation()">
   Add a Location
 </button>
 <form id="newLocationForm" class="edit-grid double-width display-none">
-    <input type="checkbox" id="locationAdded" name="locationAdded" required />
-    <label for="locationAdded">Click the map to add a location.</label>
+  <fieldset class="double-width">
+  <legend>Click the map or paste values.</legend>
+  <div class="double-width">
+    <label for="latlng">LatnLong:</label>
+    <input
+      type="text"
+      id="latlng"
+      name="latlng"
+      minlength="1"
+      maxlength="60"
+      size="10"
+      class="double-width"
+    />
+  </div>
+  <div class="double-width">
+    <label for="lat">Latitude:</label>
+    <input
+      type="text"
+      id="lat"
+      name="lat"
+      required
+      minlength="1"
+      maxlength="60"
+      size="10"
+      class="double-width"
+    />
+  </div>
+<div class="double-width">
+  <label for="lng">Longitude:</label>
+  <input
+    type="text"
+    id="lng"
+    name="lng"
+    minlength="1"
+    maxlength="60"
+    size="10"
+    class="double-width"
+  />
+</div>
+  </fieldset>
   <label for="title">Name:</label>
   <input
     type="text"
     id="title"
     name="title"
-    required
     minlength="1"
     maxlength="60"
     size="10"
@@ -27,10 +64,11 @@
     size="10"
     class="double-width"
   ></textarea>
+  <button class="display-none" id="saveAddLocation" onclick="saveAddLocation()">
+    Save
+  </button>
+  <button class="display-none" id="cancelAddLocation" onclick="cancelAddLocation()">
+    Cancel
+  </button>
 </form>
 <div class="double-width" id="currentLocations"></div>
-<script>
-  function enableAddLocation() {
-    document.getElementById("newLocationForm").classList.remove("display-none");
-}
-</script>

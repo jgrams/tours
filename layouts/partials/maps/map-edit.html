@@ -1,9 +1,16 @@
-{{ partial "maps/empty-map-location" . }} {{ partial "maps/map.html" }} {{
-partial "create/edit-map-form" . }}
+{{ partial "maps/empty-map-location" . }} {{ partial "maps/map.html" . }} {{
+partial "create/edit-map-container" . }}
 <script>
   const storageName = "createMap";
+  const inProcessMarker = "in-process-marker";
   let mapData = null;
   const currentLocationsTemplate = document.getElementById("location_");
+  const titleInput = document.getElementById("initialTitle");
+  //Location Form Fields
+  const addLocationForm = document.getElementById("newLocationForm");
+  const saveButton = document.getElementById("saveAddLocation");
+  const newButton = document.getElementById("addLocationButton");
+  const cancelButton = document.getElementById("cancelAddLocation");
 
   //Edit Front End Functions
   function updateFrontEndZoom(data) {
@@ -20,6 +27,14 @@ partial "create/edit-map-form" . }}
     document.getElementById("initialLocationLong").innerHTML = data.lng;
   }
 
+  function updateFrontEndTitle(title) {
+    titleInput.value = title;
+  }
+
+  function updateObjectTitle(title) {
+    mapData.title = title;
+  }
+
   function updateObjectLocation(data) {
     mapData.initialLocation.lat = data.lat;
     mapData.initialLocation.lng = data.lng;
@@ -30,6 +45,7 @@ partial "create/edit-map-form" . }}
     updateFrontEndInitialLocation(data.initialLocation);
     updateFrontEndZoom(data.initialLocation.zoom);
     addAllInitialLocations(data.locations);
+    updateFrontEndTitle(data.title);
   }
 
   // User Interaction Functions
@@ -45,10 +61,61 @@ partial "create/edit-map-form" . }}
     updateObjectZoom(currentZoom);
   }
 
-  function createLocationNode() {}
+  function updateTitle() {
+    mapData.title = titleInput.value;
+    saveData();
+  }
+
+  function saveAddLocation() {
+    console.log(addLocationForm);
+  }
+
+  function cancelAddLocation() {}
 
   function saveData() {
     localStorage.setItem(storageName, JSON.stringify(mapData));
+  }
+
+  // Creating a New Location
+  function toggleAddLocationFormVisiblity() {
+    toggleElementVisibility(addLocationForm);
+    toggleElementVisibility(saveButton);
+    toggleElementVisibility(newButton);
+    toggleElementVisibility(cancelButton);
+  }
+
+  function toggleElementVisibility(element) {
+    if (element.classList.contains("display-none")) {
+      element.classList.remove("display-none");
+    } else {
+      element.classList.add("display-none");
+    }
+  }
+
+  function enableAddLocation() {
+    toggleAddLocationFormVisiblity();
+    map.on("click", getMapClickLocation);
+  }
+
+  function cancelAddLocation() {
+    toggleAddLocationFormVisiblity();
+    map.removeListener("click");
+  }
+
+  function getMapClickLocation(e) {
+    let element = document.getElementById(inProcessMarker);
+    if (element) {
+      element.remove();
+    }
+    let addedLocation = L.marker(e.latlng).addTo(map);
+    addedLocation._icon.id = inProcessMarker;
+    updateLatLngField(e.latlng);
+  }
+
+  function updateLatLngField(latlng) {
+    document.getElementById("lat").value = latlng.lat;
+    document.getElementById("lng").value = latlng.lng;
+    document.getElementById("latlng").value = `${latlng.lat},${latlng.lng}`;
   }
 
   // Initial Map Setup
