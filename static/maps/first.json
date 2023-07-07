@@ -1,30 +1,59 @@
 {
-    "title": "First Tour",
-    "Short Description": "My favorite gems in downtown Chicago.",
-    "slug": "first",
+    "title": "Tour",
+    "Short Description": "The kind of stuff, and what I like in Chicago.",
     "initialLocation": {
-        "lat": "41.8772",
-        "lng": "-87.6087",
-        "zoom": "14"
+        "lat": 41.86767530032312,
+        "lng": -87.62373447418214,
+        "zoom": 14
     },
     "locations": [
         {
-            "lat": "41.88807366856188",
-            "lng": "-87.63525918537786",
-            "title": "The Merchandise Mart",
-            "short": "Chicago’s Merchandise Mart was the first ever building with its own zip code. It holds wondrous secrets, like a tassel store, office furnature fire sales, and the most perfectly numbered staircase in the world.",
-            "tags": [
-                "places"
-            ]
+            "lat": "41.86317340041875",
+            "lng": "-87.62075473816624",
+            "title": "asdf",
+            "short": "1"
         },
         {
-            "lat": "41.89025875682677",
-            "lng": "-87.62368653332975",
-            "title": "Tribune Tower",
-            "short": "Tribune Tower has stones from around the world embedded in the building. See and touch the whole world in a single city block.",
-            "tags": [
-                "places"
-            ]
+            "lat": "41.86124409460336",
+            "lng": "-87.62127034603321",
+            "title": "asdf",
+            "short": "2"
+        },
+        {
+            "lat": "41.86326283659879",
+            "lng": "-87.62934820261579",
+            "title": "sfgdhs",
+            "short": "3"
+        },
+        {
+            "lat": "41.85629918553164",
+            "lng": "-87.62999725903099",
+            "title": "asdfasdfa",
+            "short": "sdfasdf"
+        },
+        {
+            "lat": "41.87284368112061",
+            "lng": "-87.6305286252266",
+            "title": "asdf",
+            "short": "asdf"
+        },
+        {
+            "lat": "41.87354720673442",
+            "lng": "-87.61671580987496",
+            "title": "qwerqwefad",
+            "short": "123415"
+        },
+        {
+            "lat": "41.87223141017065",
+            "lng": "-87.62127034603321",
+            "title": "11",
+            "short": "11"
         }
-    ]
+    ],
+    "locationTemplate": {
+        "lat": "",
+        "lng": "",
+        "title": "",
+        "short": ""
+    }
 }

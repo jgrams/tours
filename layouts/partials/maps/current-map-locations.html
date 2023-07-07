@@ -12,6 +12,7 @@
   function createLocationDisplayElement(location, index) {
     let copy = currentLocationsTemplate.cloneNode(true);
     addIndexToId(copy, index);
+    copy.dataset.index = index;
     for (element of copy.children) {
       addIndexToId(element, index);
       addTextToElement(element, location);

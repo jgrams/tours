@@ -66,17 +66,34 @@ partial "create/edit-map-container" . }}
     saveData();
   }
 
-  function saveAddLocation() {
-    console.log(addLocationForm);
+  function saveNewLocation() {
+    const formData = new FormData(addLocationForm);
+    const cloneLocation = Object.assign({}, mapData.locationTemplate);
+    for (input of formData.entries()) {
+      let key = input[0];
+      let value = input[1];
+      if (cloneLocation.hasOwnProperty(key)) {
+        cloneLocation[key] = value;
+      }
+    };
+    mapData.locations.push(cloneLocation);
+    let locationIndex = mapData.locations.length - 1;
+    createLocationDisplayElement(cloneLocation, locationIndex);
+    saveData();
+    document.getElementById(inProcessMarker).id = "";
+    addLocationForm.reset();
   }
-
-  function cancelAddLocation() {}
 
   function saveData() {
     localStorage.setItem(storageName, JSON.stringify(mapData));
   }
 
   // Creating a New Location
+  function saveMapLocationObject(formData) {
+    mapData.initialLocation.zoom = data;
+    saveData();
+  }
+
   function toggleAddLocationFormVisiblity() {
     toggleElementVisibility(addLocationForm);
     toggleElementVisibility(saveButton);
@@ -99,17 +116,22 @@ partial "create/edit-map-container" . }}
 
   function cancelAddLocation() {
     toggleAddLocationFormVisiblity();
-    map.removeListener("click");
+    removeInProcessMarker();
+    addLocationForm.reset();
   }
 
   function getMapClickLocation(e) {
+    removeInProcessMarker()
+    let addedLocation = L.marker(e.latlng).addTo(map);
+    addedLocation._icon.id = inProcessMarker;
+    updateLatLngField(e.latlng);
+  }
+
+  function removeInProcessMarker() {
     let element = document.getElementById(inProcessMarker);
     if (element) {
       element.remove();
     }
-    let addedLocation = L.marker(e.latlng).addTo(map);
-    addedLocation._icon.id = inProcessMarker;
-    updateLatLngField(e.latlng);
   }
 
   function updateLatLngField(latlng) {
@@ -124,13 +146,11 @@ partial "create/edit-map-container" . }}
       const response = await fetch("/templates/new-map.json");
       mapData = await response.json();
       localStorage.setItem(storageName, JSON.stringify(mapData));
-      populateMap(mapData);
-      populateEditForm(mapData);
     } else {
       mapData = JSON.parse(localStorage.getItem(storageName));
-      populateMap(mapData);
-      populateEditForm(mapData);
     }
+    populateMap(mapData);
+    populateEditForm(mapData);
   }
   fetchMapData();
 </script>

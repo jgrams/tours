@@ -3,12 +3,18 @@
     src: url(/fonts/EBGaramond-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/Inter-VariableFont_slnt,wght.ttf);
+}
+
 body {
     display: grid;
     justify-content: center;
     text-align: center;
     padding: 12px;
     grid-gap: .2em;
+    font-family: 'Inter', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
