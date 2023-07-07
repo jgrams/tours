@@ -1,14 +1,10 @@
 {{- define "main" }}
 <h1>{{ .Title }}</h1>
-<div>{{ .Content }}</div>
+<div class="text-right">{{ .Content }}</div>
 {{ partial "maps/map-view" "/maps/first.json" }}
-<ul>
   {{ with .GetPage "create/tour-map" }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </li>
+    <a href="{{ .Permalink }}"><button>{{ .Title }}</button></a>
   {{ end }}
-</ul>
 {{- end }} 
 {{- define "map-script" }}
  {{ partial "scripts/map-javascript-loader.html" . }}

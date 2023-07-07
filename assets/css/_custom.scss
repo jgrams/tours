@@ -9,7 +9,6 @@
 }
 
 body {
-    display: grid;
     justify-content: center;
     text-align: center;
     padding: 12px;
@@ -33,6 +32,12 @@ html {
     margin: auto;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
 .edit-grid {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
@@ -49,4 +54,34 @@ html {
 
 .display-none {
     display: none;
+}
+
+button {
+    max-width: 80%;
+    height: 3lh;
+    justify-self: stretch;
+    padding-left: 3ch;
+    padding-right: 3ch;
+}
+
+.location-card {
+    justify-content: center;
+    max-width: 50ch;
+    padding: 3ch;
+}
+
+.grid-gap-sm {
+    grid-gap: .6em;
+}
+
+#svgBeanFillPath {
+    fill: #d0d0d0;
+}
+
+#svgBeanOutlinePath {
+    fill: black;
+}
+
+header {
+    padding: .6rem;
 }
