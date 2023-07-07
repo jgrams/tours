@@ -26,16 +26,19 @@ html {
 }
 
 #map {
-    min-height: 180px;
     height: 80vh;
+    max-height: 600px;
     width: 90%;
+    max-width: 600px;
     margin: auto;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
 }
 
 .edit-grid {
@@ -62,11 +65,11 @@ button, .button-like {
     padding-left: 4ch;
     padding-right: 4ch;
     max-width: 80ch;
+    margin-bottom: 1em;
 }
 
 .location-card {
     justify-content: center;
-    max-width: 50ch;
     padding: 3ch;
 }
 
@@ -84,4 +87,15 @@ button, .button-like {
 
 header {
     padding: .6rem;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.mv-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-width-sm {
+    max-width: 60ch;
 }

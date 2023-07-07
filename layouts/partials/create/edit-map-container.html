@@ -3,8 +3,8 @@
   {{ partial "maps/current-map-locations.html" . }}
   <h2 class="double-width">Map Defaults</h2>
   <div>Map Title:</div>
-  <input class="double-width" id="initialTitle" type="text"/>
-  <button class="double-width" id="setCenterMap" onclick="updateTitle()">
+  <input class="double-width max-width-sm mv-auto" id="initialTitle" type="text"/>
+  <button class="double-width max-width-sm mv-auto" id="setCenterMap" onclick="updateTitle()">
     Set Map Title
   </button>
   <div>
@@ -15,14 +15,14 @@
     Starting Longitude:
     <div id="initialLocationLong"></div>
   </div>
-  <button class="double-width" id="setCenterMap" onclick="setCenterMap()">
+  <button class="double-width max-width-sm mv-auto" id="setCenterMap" onclick="setCenterMap()">
     Set Map Starting Location
   </button>
-  <div class="double-width">
+  <div class="double-width max-width-sm mv-auto">
     Starting Zoom:
     <div id="initialLocationZoom"></div>
   </div>
-  <button class="double-width" id="setInitialZoom" onclick="setInitialZoom()">
+  <button class="double-width max-width-sm mv-auto" id="setInitialZoom" onclick="setInitialZoom()">
     Set Map's Starting Zoom
   </button>
 </div>

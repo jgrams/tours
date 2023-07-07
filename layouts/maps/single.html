@@ -2,5 +2,6 @@
     {{ partial "scripts/map-javascript-loader.html" . }}
 {{- end }} 
 {{ define "main" }} 
+<h1>{{.Title}}</h1>
     {{ partial "maps/map-view" .Params.srcLink }}
 {{ end }}
