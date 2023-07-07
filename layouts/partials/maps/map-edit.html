@@ -4,7 +4,6 @@ partial "create/edit-map-container" . }}
   const storageName = "createMap";
   const inProcessMarker = "in-process-marker";
   let mapData = null;
-  const currentLocationsTemplate = document.getElementById("location_");
   const titleInput = document.getElementById("initialTitle");
   //Location Form Fields
   const addLocationForm = document.getElementById("newLocationForm");
@@ -118,6 +117,7 @@ partial "create/edit-map-container" . }}
     toggleAddLocationFormVisiblity();
     removeInProcessMarker();
     addLocationForm.reset();
+    map.on("click", getMapClickLocation);
   }
 
   function getMapClickLocation(e) {

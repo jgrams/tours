@@ -5,6 +5,7 @@
         const response = await fetch({{ . }});
         const mapData = await response.json();
         populateMap(mapData);
+        addAllInitialLocations(mapData.locations);
     }
     fetchMapData();
 </script>

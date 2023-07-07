@@ -11,6 +11,9 @@
         "lat": "",
         "lng": "",
         "title": "",
-        "short": ""
+        "short": "",
+        "long": "",
+        "cost": "",
+        "link": ""
     }
 }

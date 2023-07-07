@@ -70,6 +70,20 @@
     size="10"
     class="double-width"
   ></textarea>
+  <label for="cost">Cost*</label>
+  <input id="cost" name="cost" class="double-width" required type="number" min="0.00" max="1000.00" step="0.01" />
+  <label for="long">Long Description</label>
+  <textarea
+    type="text"
+    id="long"
+    name="long"
+    minlength="5"
+    maxlength="10000"
+    size="10"
+    class="double-width"
+  ></textarea>
+  <label for="link">Link</label>
+  <input id="link" name="link" class="double-width" type="url" />
 </form>
 <button class="display-none" id="saveAddLocation" type="submit" onclick="saveNewLocation()">Save</button>
 <button

@@ -3,6 +3,7 @@
   const currentLocationsContainer = document.getElementById(
     "currentMapLocations"
   );
+  const currentLocationsTemplate = document.getElementById("location_");
   function addAllInitialLocations(locations) {
     locations.forEach((location, index) => {
       createLocationDisplayElement(location, index);
@@ -12,20 +13,37 @@
   function createLocationDisplayElement(location, index) {
     let copy = currentLocationsTemplate.cloneNode(true);
     addIndexToId(copy, index);
-    copy.dataset.index = index;
-    for (element of copy.children) {
-      addIndexToId(element, index);
-      addTextToElement(element, location);
-    };
+    for ([key, value] of Object.entries(location)) {
+      if (key == "title") {
+        const newDiv = document.createElement("h3");
+      } else {
+        const newDiv = document.createElement("div");
+      }
+      addLocationDetailDefaults(newDiv, key, index);
+      switch (key) {
+        case "lng":
+        case "lat":
+          continue;
+        default:
+          const newContent = document.createTextNode(value);
+          newDiv.appendChild(newContent);
+          copy.appendChild(newDiv);
+      }
+    }
     currentLocationsContainer.appendChild(copy);
   }
 
-  function addTextToElement(element, location) {
-    let dataKey = element.dataset.objectKey;
-    element.innerText = location[dataKey];
+  function addDefaultText(element, value) {}
+
+  function addLocationDetailDefaults(element, key, index) {
+    element.classList.add("mv-auto");
+    element.classList.add("max-width-sm");
+    element.id = `location_${key}_${index}`;
+    element.dataset.index = index;
   }
 
   function addIndexToId(element, index) {
     element.id = element.id + index;
+    element.dataset.index = index;
   }
 </script>
