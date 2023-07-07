@@ -1,9 +1,17 @@
 {{- define "main" }}
 <h1>{{ .Title }}</h1>
 <div class="text-right">{{ .Content }}</div>
+.
+{{ range where .Pages "Section" "maps" }}
+<h2 class="double-width">{{.Title}}</h2>
+  {{ range .Pages }}
+  <button><a href="{{ .Permalink }}">{{ .Title }}</a></button>
+    {{ . }}
+  {{ end }}
+{{ end }}
 {{ partial "maps/map-view" "/maps/first.json" }}
   {{ with .GetPage "create/tour-map" }}
-    <a href="{{ .Permalink }}"><button>{{ .Title }}</button></a>
+  <button><a href="{{ .Permalink }}">{{ .Title }}</a></button>
   {{ end }}
 {{- end }} 
 {{- define "map-script" }}

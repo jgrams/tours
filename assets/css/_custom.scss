@@ -56,12 +56,12 @@ main {
     display: none;
 }
 
-button {
-    max-width: 80%;
-    height: 3lh;
-    justify-self: stretch;
-    padding-left: 3ch;
-    padding-right: 3ch;
+button, .button-like {
+    height: 3.4lh;
+    justify-self: center;
+    padding-left: 4ch;
+    padding-right: 4ch;
+    max-width: 80ch;
 }
 
 .location-card {
