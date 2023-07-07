@@ -8,9 +8,18 @@
     maximumAge: 0,
   };
 
+  var meMapIcon = L.icon({
+    iconUrl: '/icons/crosswalk.png',
+    iconSize: [30, 48],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
   function success(pos) {
     const crd = pos.coords;
-    map.setView([crd.latitude, crd.longitude], 17);
+    let latlng = [crd.latitude, crd.longitude];
+    map.setView(latlng, 17);
+    L.marker(latlng, {icon: meMapIcon}).addTo(map);
   }
 
   function error(err) {

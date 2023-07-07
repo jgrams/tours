@@ -11,37 +11,43 @@
             "lat": "41.894379686840274",
             "lng": "-87.62654603624745",
             "title": "Dreihaus Museum",
-            "short": "People rich enough to make their house museums always build nice museums. Beautiful custom tiling, an ancient pull toilet, and a Tiffany glass dome adorn this mansion. "
+            "short": "People rich enough to make their house museums always build nice museums. Beautiful custom tiling, an ancient pull toilet, and a Tiffany glass dome adorn this mansion. ",
+            "cost": "20"
         },
         {
             "lat": "41.88828855530552",
             "lng": "-87.63531275948",
             "title": "Merchandise Mart",
-            "short": "The first building with its own zip code, it holds wondrous secrets: a magnificent tassel store, office furniture for sale, and a perfectly numbered staircase."
+            "short": "The first building with its own zip code, it holds wondrous secrets: a magnificent tassel store, office furniture for sale, and a perfectly numbered staircase.",
+            "cost": "0"
         },
         {
             "lat": "41.89056872881578",
             "lng": "-87.62335765920893",
             "title": "Tribune Tower",
-            "short": "Tribune Tower has stones from around the world embedded in the building. See and touch the whole world in a single city block."
+            "short": "Tribune Tower has stones from around the world stuck into the building. Touch the whole world on a single city block.",
+            "cost": "0"
         },
         {
             "lat": "41.88714686988527",
             "lng": "-87.63385577351262",
             "title": "Chicago Riverwalk",
-            "short": "A cooler walk on a hot day, the Riverwalk is pretty nice."
+            "short": "A cooler way to walk on a hot day, the Riverwalk is pretty nice for getting around. Don't take up the whole path.",
+            "cost": "0"
         },
         {
             "lat": "41.886497466082254",
             "lng": "-87.62681523293946",
             "title": "",
-            "short": "Built on a granite base, there was a working car elevator in the building going up 23 floors."
+            "short": "This building had a working car elevator going up 23 floors.",
+            "cost": "0"
         }
     ],
     "locationTemplate": {
         "lat": "",
         "lng": "",
         "title": "",
-        "short": ""
+        "short": "",
+        "cost": ""
     }
 }
