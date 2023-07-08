@@ -1,5 +1,4 @@
 {{ partial "maps/map" }}
-{{ partial "where-am-i" . }}
 <script>
     async function fetchMapData() {
         const response = await fetch({{ . }});

@@ -1,6 +1,7 @@
-<div class="flex">
+<div class="flex mapActions">
   <button id="locateMe" onclick="">Where Am I?</button>
 </div>
+<div class="flex errorAlert" id="mapActionError"></div>
 <script>
   const options = {
     enableHighAccuracy: true,
@@ -23,7 +24,7 @@
   }
 
   function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    document.getElementById("mapActionError").innerText = `The computer said "${err.message}". If it helps, error code is: ${err.code}`
   }
 
   const button = document.getElementById("locateMe");
