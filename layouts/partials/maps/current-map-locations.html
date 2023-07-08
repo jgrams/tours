@@ -12,20 +12,38 @@
 
   function createLocationDisplayElement(location, index) {
     let copy = currentLocationsTemplate.cloneNode(true);
+    let newDiv = null;
     addIndexToId(copy, index);
     for ([key, value] of Object.entries(location)) {
       if (key == "title") {
-        const newDiv = document.createElement("h3");
+        newDiv = document.createElement("h3");
       } else {
-        const newDiv = document.createElement("div");
+        newDiv = document.createElement("div");
       }
       addLocationDetailDefaults(newDiv, key, index);
+      let display = value;
       switch (key) {
         case "lng":
         case "lat":
           continue;
+        case "link":
+          const newLink = document.createElement("a");
+          newLink.href = value;
+          newLink.target = "_blank";
+          const linkContent = document.createTextNode("Location Link");
+          newLink.appendChild(linkContent);
+          newDiv.appendChild(newLink);
+          newDiv.classList.remove("double-width");
+          display = "";
+        case "cost":
+          if (value == 0) {
+            display = "Cost: Free";
+          } else {
+            display = `Cost: $${value}`;
+          }
+          newDiv.classList.remove("double-width");
         default:
-          const newContent = document.createTextNode(value);
+          const newContent = document.createTextNode(display);
           newDiv.appendChild(newContent);
           copy.appendChild(newDiv);
       }
@@ -36,8 +54,8 @@
   function addDefaultText(element, value) {}
 
   function addLocationDetailDefaults(element, key, index) {
-    element.classList.add("mv-auto");
-    element.classList.add("max-width-sm");
+    element.classList.add(`location-${key}`);
+    element.classList.add("double-width");
     element.id = `location_${key}_${index}`;
     element.dataset.index = index;
   }

@@ -1,7 +1,3 @@
 <header class="siteHeader flex justify-center">
-  <a href="{{ .Site.BaseURL }}" class="headerLink" aria-label="Home">
-      <span class="logoIcon">
-          {{- partial "logo.html" . -}}
-      </span>
-  </a>
+{{ partial "logo-link" . }}
 </header>

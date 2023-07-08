@@ -14,13 +14,27 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Garamond', 'system-ui', 'serif';
 }
 
 html {
     min-height: 100vh;
     background-color: var(--light);
+}
+
+a, button {
+    color: #41B6E6;
+    text-decoration: underline;
+}
+
+a:visited {
+    color:#4c2b93;
 }
 
 #map {
@@ -57,7 +71,10 @@ main {
     display: none;
 }
 
-button, .button-like {
+button,
+.button-like {
+    background-color: var(--primary-blue);
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.4);
     height: 3.4lh;
     justify-self: center;
     padding-left: 4ch;
@@ -66,9 +83,20 @@ button, .button-like {
     margin-bottom: 1em;
 }
 
+.button-like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .location-card {
     justify-content: center;
-    padding: 3ch;
+    padding-left: 1ch;
+    padding-right: 1ch;
+    padding-bottom: 1ch;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-gap: .3em;
 }
 
 .grid-gap-sm {
@@ -76,17 +104,27 @@ button, .button-like {
 }
 
 #svgBeanFillPath {
-    fill: #d0d0d0;
+    fill: var(--flag-blue);
 }
 
 #svgBeanOutlinePath {
-    fill: black;
+    stroke: var(--lightest-red);
+    fill: var(--dark);
+    stroke-width: .1;
+}
+
+header,
+footer {
+    padding: .6rem;
+    justify-content: center;
 }
 
 header {
-    padding: .6rem;
-    justify-content: center;
     margin-top: 1em;
+}
+
+footer {
+    margin-bottom: 1em;
 }
 
 .mv-auto {
@@ -96,4 +134,14 @@ header {
 
 .max-width-sm {
     max-width: 60ch;
+}
+
+.location-short {
+    margin-bottom: 0.3em;
+    max-width: 65ch;
+    justify-self: center;
+}
+
+footer .headerLink {
+    max-width: 40ch;
 }
