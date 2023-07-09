@@ -24,7 +24,10 @@
   }
 
   function error(err) {
-    document.getElementById("mapActionError").innerText = `The computer said "${err.message}". If it helps, error code is: ${err.code}`
+    const errorElement = document.getElementById("mapActionError")
+    errorElement.innerText = `The computer said "${err.message}". If it helps, error code is: ${err.code}`
+    errorElement.classList.remove("fade-in");
+    errorElement.classList.add("fade-in");
   }
 
   const button = document.getElementById("locateMe");

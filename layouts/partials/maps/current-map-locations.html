@@ -12,14 +12,9 @@
 
   function createLocationDisplayElement(location, index) {
     let copy = currentLocationsTemplate.cloneNode(true);
-    let newDiv = null;
     addIndexToId(copy, index);
     for ([key, value] of Object.entries(location)) {
-      if (key == "title") {
-        newDiv = document.createElement("h3");
-      } else {
-        newDiv = document.createElement("div");
-      }
+      let newDiv = createElement(key);
       addLocationDetailDefaults(newDiv, key, index);
       let display = value;
       switch (key) {
@@ -34,7 +29,8 @@
           newLink.appendChild(linkContent);
           newDiv.appendChild(newLink);
           newDiv.classList.remove("double-width");
-          display = "";
+          copy.appendChild(newDiv);
+          continue;
         case "cost":
           if (value == 0) {
             display = "Cost: Free";
@@ -49,6 +45,13 @@
       }
     }
     currentLocationsContainer.appendChild(copy);
+  }
+
+  function createElement(key) {
+  if (key == "title") {
+    return document.createElement("h3");
+  } else {
+    return document.createElement("div");
   }
 
   function addDefaultText(element, value) {}

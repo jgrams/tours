@@ -46,11 +46,16 @@ a:visited {
 }
 
 main {
-    display: flex;
+    gap: .4em;
+}
+
+.flex-column {
     flex-direction: column;
+}
+
+.flex-all-center {
     justify-content: center;
     align-items: center;
-    gap: .4em;
 }
 
 .edit-grid {
@@ -147,3 +152,16 @@ footer {
 footer .headerLink {
     max-width: 40ch;
 }
+
+.grid-gap-sm {
+    gap: .2rem;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

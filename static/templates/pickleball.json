@@ -1,6 +1,6 @@
 {
-    "title": "Tour",
-    "Short Description": "The kind of stuff, and what I like in Chicago.",
+    "title": "Pickleball",
+    "Short Description": "Map of Pickleball courts in Chicago and information about when and where to play.",
     "initialLocation": {
         "lat": "41.87965863341244",
         "lng": "-87.631424068017",
@@ -14,6 +14,9 @@
         "short": "",
         "long": "",
         "cost": "",
-        "link": ""
+        "link": "",
+        "address": "",
+        "host": "",
+        "host-note": ""
     }
 }
