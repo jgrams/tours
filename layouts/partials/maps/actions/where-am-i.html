@@ -1,5 +1,5 @@
 <div class="flex mapActions">
-  <button id="locateMe" onclick="">Where Am I?</button>
+  <button id="locateMe">Where Am I?</button>
 </div>
 <div class="flex errorAlert" id="mapActionError"></div>
 <script>
@@ -25,8 +25,7 @@
 
   function error(err) {
     const errorElement = document.getElementById("mapActionError")
-    errorElement.innerText = `The computer said "${err.message}". If it helps, error code is: ${err.code}`
-    errorElement.classList.remove("fade-in");
+    errorElement.innerText = `"${err.message}". If it helps, the error code is: ${err.code}`
     errorElement.classList.add("fade-in");
   }
 

@@ -10,6 +10,18 @@
     });
   }
 
+  function addLocationDetailDefaults(element, key, index) {
+    element.classList.add(`location-${key}`);
+    element.classList.add("double-width");
+    element.id = `location_${key}_${index}`;
+    element.dataset.index = index;
+  }
+
+  function addIndexToId(element, index) {
+    element.id = element.id + index;
+    element.dataset.index = index;
+  }
+
   function createLocationDisplayElement(location, index) {
     let copy = currentLocationsTemplate.cloneNode(true);
     addIndexToId(copy, index);
@@ -48,23 +60,10 @@
   }
 
   function createElement(key) {
-  if (key == "title") {
-    return document.createElement("h3");
-  } else {
-    return document.createElement("div");
-  }
-
-  function addDefaultText(element, value) {}
-
-  function addLocationDetailDefaults(element, key, index) {
-    element.classList.add(`location-${key}`);
-    element.classList.add("double-width");
-    element.id = `location_${key}_${index}`;
-    element.dataset.index = index;
-  }
-
-  function addIndexToId(element, index) {
-    element.id = element.id + index;
-    element.dataset.index = index;
+    if (key == "title") {
+      return document.createElement("h3");
+    } else {
+      return document.createElement("div");
+    }
   }
 </script>
