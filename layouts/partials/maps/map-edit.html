@@ -1,5 +1,41 @@
-{{ partial "maps/map.html" . }} {{
-partial "create/edit-map-container" . }}
+{{ partial "maps/map.html" . }}
+<div class="grid edit-grid">
+  {{ partial "create/edit-map-locations.html" . }}
+  {{ partial "maps/current-map-locations.html" }}
+  <h2 class="double-width">Map Defaults</h2>
+  <div>Map Title:</div>
+  <input class="double-width max-width-sm mv-auto" id="initialTitle" type="text"/>
+  <button class="double-width max-width-sm mv-auto" id="setCenterMap" onclick="updateTitle()">
+    Set Map Title
+  </button>
+  <div>
+    Starting Latitude:
+    <div id="initialLocationLat"></div>
+  </div>
+  <div>
+    Starting Longitude:
+    <div id="initialLocationLong"></div>
+  </div>
+  <button class="double-width max-width-sm mv-auto" id="setCenterMap" onclick="setCenterMap()">
+    Set Map Starting Location
+  </button>
+  <div class="double-width max-width-sm mv-auto">
+    Starting Zoom:
+    <div id="initialLocationZoom"></div>
+  </div>
+  <button class="double-width max-width-sm mv-auto" id="setInitialZoom" onclick="setInitialZoom()">
+    Set Map's Starting Zoom
+  </button>
+  <label for="templateSelect">Select Location Template</label>
+  <select name="templateSelect" class="double-width max-width-sm mv-auto" id="selectTemplate">
+    {{ range slice "new-map" "pickleball" }}
+    <option value={{ printf "templates/%s.json" . }}>{{ title . }}</option>
+      {{ . }}
+    {{ end }}
+  </select>
+  </button>
+</div>
+
 <script>
   const storageName = "createMap";
   const inProcessMarker = "in-process-marker";
@@ -10,6 +46,7 @@ partial "create/edit-map-container" . }}
   const saveButton = document.getElementById("saveAddLocation");
   const newButton = document.getElementById("addLocationButton");
   const cancelButton = document.getElementById("cancelAddLocation");
+  const selectTemplateDropdown = document.getElementById("selectTemplate");
 
   //Edit Front End Functions
   function updateFrontEndZoom(data) {
@@ -39,6 +76,11 @@ partial "create/edit-map-container" . }}
     mapData.initialLocation.lng = data.lng;
     saveData();
   }
+
+  selectTemplateDropdown.addEventListener("change", (e) => {
+    
+    console.log(e);
+  })
 
   function populateEditForm(data) {
     updateFrontEndInitialLocation(data.initialLocation);
@@ -141,9 +183,10 @@ partial "create/edit-map-container" . }}
   }
 
   // Initial Map Setup
-  async function fetchMapData() {
+  async function fetchMapData(path) {
     if (!localStorage.getItem(storageName)) {
-      const response = await fetch("/templates/new-map.json");
+      const path = document.getElementById("selectTemplate");
+      const response = await fetch(path);
       mapData = await response.json();
       localStorage.setItem(storageName, JSON.stringify(mapData));
     } else {
@@ -152,5 +195,14 @@ partial "create/edit-map-container" . }}
     populateMap(mapData);
     populateEditForm(mapData);
   }
+
+  async function updateLocationTemplateData(path) {
+      const response = await fetch(path);
+      locationData = await response.json();
+      mapData.locationTemplate = locationData;
+      localStorage.setItem(storageName, JSON.stringify(mapData));
+    populateEditForm(mapData);
+  }
+
   fetchMapData();
 </script>

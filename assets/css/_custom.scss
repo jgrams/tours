@@ -139,8 +139,10 @@ footer {
     margin-right: auto;
 }
 
-.max-width-sm {
+.max-width-sm, .p-max-width > p {
     max-width: 60ch;
+    padding-left: .5ch;
+    padding-right: .5ch;
 }
 
 .location-short {
@@ -153,15 +155,21 @@ footer .headerLink {
     max-width: 40ch;
 }
 
-.grid-gap-sm {
-    gap: .2rem;
-}
-
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
 
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
+
+main > p,h1,h2,h3,h4,h5,h6 {
+    padding-left: .5ch;
+    padding-right: .5ch;
+}
+
+main > p {
+    max-width: 55ch;
+}

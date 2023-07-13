@@ -4,7 +4,7 @@
     {{- block "map-script" . }}{{- end }}
     <body class="{{ .Kind }} {{ .Layout }}">
         {{- partial "header.html" . -}}
-        <main class="flex flex-column flex-all-center">
+        <main class="flex flex-column flex-all-center grid-gap-sm">
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "footer.html" . -}}

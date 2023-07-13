@@ -1,4 +1,4 @@
 ---
 title: Free Chicago Tours
 ---
-Tours and maps of Chicago, no app required. Click something interesting and set off. You can even edit locations or make your own map. No tracking, ever.
+Maps of Chicago I want to share. Click something interesting and set off, no app required. You can even edit locations or make your own map, email me to get it added to the site. No tracking, ever.
