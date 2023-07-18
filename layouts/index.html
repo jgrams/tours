@@ -3,9 +3,11 @@
 <div class="max-width-sm mv-auto">{{ .Content }}</div>
 {{ range where .Pages "Section" "maps" }}
 <h2 class="double-width">{{.Title}}</h2>
-
-  {{ range .Pages }}
-  <button><a href="{{ .Permalink }}">{{ .Title }}</a></button>
+{{ with .GetPage "pickleball" }}
+  {{ partial "maps/map-link" . }}
+{{ end }}  
+{{ range .Pages }}
+    {{ partial "maps/map-link" . }}
   {{ end }}
 {{ end }}
 {{ partial "maps/map-view" "/maps/first.json" }}

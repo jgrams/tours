@@ -1,10 +1,10 @@
 {
     "title": "Pickleball",
-    "Short Description": "Map of Pickleball courts in Chicago and information about when and where to play.",
+    "Short Description": "Map of all Chicago Park Distris in Chicago.",
     "initialLocation": {
         "lat": "41.87965863341244",
         "lng": "-87.631424068017",
-        "zoom": "14"
+        "zoom": "11"
     },
     "locations": [
                 {
@@ -12,7 +12,6 @@
                     "lng": "-87.7169183",
                     "address": "3546 W. Addison St., 60618",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/athletic-field-pickleball-courts",
                     "title": "Athletic Field"
                 },
@@ -21,7 +20,6 @@
                     "lng": "-87.7154336",
                     "address": "3516 W SCHOOL ST, 60618",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/avondale-park-pickleball-courts",
                     "title": "Avondale Park"
                 },
@@ -30,18 +28,16 @@
                     "lng": "-87.6418491",
                     "address": "501 W. Wisconsin St, 60614",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/bauler-pickleball-court",
-                    "title": "Bauler - Pickleball Court"
+                    "title": "Bauler"
                 },
                 {
                     "lat": "41.941257",
                     "lng": "-87.699572",
                     "address": "3285 N ELSTON AVE, 60618",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/brands-park-pickleball",
-                    "title": "Brands Park - Pickleball"
+                    "title": "Brands Park"
                 },
                 {
                     "lat": "41.811803341526",
@@ -49,7 +45,6 @@
                     "address": "4542 S. Greenwood Ave., 60653",
                     "location_type": "Outdoor",
                     "court_count": 4,
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/brooks-gwendolyn-park",
                     "title": "Brooks (Gwendolyn) Park"
                 },
@@ -58,7 +53,6 @@
                     "lng": "-87.6492475",
                     "address": "4501 N. Clarendon Ave., 60640",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/clarendon-park-pickleball-courts",
                     "title": "Clarendon Park"
                 },
@@ -68,7 +62,6 @@
                     "address": "9201 S. Longwood Dr., 60620",
                     "location_type": "Outdoor",
                     "court_count": 1,
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/cosme-margaret-park",
                     "title": "Cosme (Margaret) Park"
                 },
@@ -77,7 +70,6 @@
                     "lng": "-87.6478954",
                     "address": "3620 S. Lituanica Ave., 60609",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/donovan-george-park",
                     "title": "Donovan (George) Park"
                 },
@@ -86,7 +78,6 @@
                     "lng": "-87.6539074",
                     "address": "1119 W. Cullerton St., 60608",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/dvorak-park-pickleball-courts",
                     "title": "Dvorak Park"
                 },
@@ -95,7 +86,6 @@
                     "lng": "-87.6108915",
                     "address": "3520 S. Cottage Grove Ave., 60653",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/ellis-park-pickleball-courts",
                     "title": "Ellis Park"
                 },
@@ -104,7 +94,6 @@
                     "lng": "-87.6577277",
                     "address": "1312 S. Racine Ave., 60608",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/fosco-park-pickleball-courts",
                     "title": "Fosco Park"
                 },
@@ -113,16 +102,14 @@
                     "lng": "-87.738041887027",
                     "address": "4222 W. Foster Ave, 60630",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/gompers-park-pickleball-court",
-                    "title": "Gompers Park - Pickleball Court"
+                    "title": "Gompers Park"
                 },
                 {
                     "lat": "41.8119746",
                     "lng": "-87.600179",
                     "address": "4542 S. Greenwood Ave., 60653",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/gwendolyn-brooks-park-pickleball-courts",
                     "title": "Gwendolyn Brooks Park"
                 },
@@ -131,7 +118,6 @@
                     "lng": "-87.6376924",
                     "address": "513 W. 72nd St., 60621",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/hamilton-alexander-park",
                     "title": "Hamilton (Alexander) Park"
                 },
@@ -140,7 +126,6 @@
                     "lng": "-87.6718838",
                     "address": "1824 S. Wood St., 60608",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/harrison-carter-park",
                     "title": "Harrison (Carter) Park"
                 },
@@ -149,7 +134,6 @@
                     "lng": "-87.695927636834",
                     "address": "2741 W. Montrose Ave, 60618",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/horner-park-pickleball-courts",
                     "title": "Horner Park"
                 },
@@ -158,7 +142,6 @@
                     "lng": "-87.5973772",
                     "address": "4434 S. Lake Park Ave., 60653",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/kennicott-park-pickleball-courts",
                     "title": "Kennicott Park"
                 },
@@ -167,16 +150,14 @@
                     "lng": "-87.704965749599",
                     "address": "7000 N. Sacramento Ave., 60645",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/lerner-park-pickleball",
-                    "title": "Lerner Park - Pickleball"
+                    "title": "Lerner Park"
                 },
                 {
                     "lat": "41.7834138",
                     "lng": "-87.6746801",
                     "address": "6054 S. Damen Ave., 60636",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/lindblom-robert-park",
                     "title": "Lindblom (Robert) Park"
                 },
@@ -187,7 +168,6 @@
                     "location_type": "Outdoor",
                     "court_count": 10,
                     "nets": "Temporary",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/maggie-daley-park",
                     "title": "Maggie Daley Park"
                 },
@@ -196,7 +176,6 @@
                     "lng": "-87.6069252",
                     "address": "3858 S. Cottage Grove, 60653",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/mandrake-henry-brown-park",
                     "title": "Mandrake (Henry Brown) Park"
                 },
@@ -207,7 +186,6 @@
                     "location_type": "Outdoor",
                     "court_count": 1,
                     "nets": "Permanant, is a tennis net.",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/mcguane-john-park",
                     "title": "McGuane (John) Park"
                 },
@@ -216,7 +194,6 @@
                     "lng": "-87.687023",
                     "address": "2617 W. 105th St., 60655",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/munroe-roy-park",
                     "title": "Munroe (Roy) Park"
                 },
@@ -225,7 +202,6 @@
                     "lng": "-87.6781161",
                     "address": "7340 N. Rogers Ave., 60626",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/pottawattomie-gymnasium",
                     "title": "Pottawattomie Gymnasium"
                 },
@@ -234,16 +210,14 @@
                     "lng": "-87.6780744",
                     "address": "7340 N. Rogers Ave., 60626",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/pottawattomie-park-pickleball",
-                    "title": "Pottawattomie Park - Pickleball"
+                    "title": "Pottawattomie Park"
                 },
                 {
                     "lat": "42.02093735093",
                     "lng": "-87.664429163754",
                     "address": "7705 N. Eastlake Terrace, 60626",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/rogers-beach-park-pickleball-courts",
                     "title": "Rogers Beach Park"
                 },
@@ -252,7 +226,6 @@
                     "lng": "-87.695574760437",
                     "address": "7345 N. Washtenaw Ave, 60645",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/rogers-park-pickleball-courts",
                     "title": "Rogers Park"
                 },
@@ -261,7 +234,6 @@
                     "lng": "-87.73724083972",
                     "address": "5861 N. Kostner Ave, 60646",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/sauganash-park-pickleball-courts",
                     "title": "Sauganash Park"
                 },
@@ -270,16 +242,14 @@
                     "lng": "-87.66887331786",
                     "address": "5887 N. Ridge Ave., 60660",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/senn-park-pickleball",
-                    "title": "Senn Park - Pickleball"
+                    "title": "Senn Park"
                 },
                 {
                     "lat": "41.7301281",
                     "lng": "-87.6112026",
                     "address": "501 E. 90th Pl., 60619",
                     "location_type": "Outdoor",
-                    "provider": "Park District",
                     "court_count": 6,
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/tuley-murray-park",
                     "title": "Tuley (Murray) Park"
@@ -289,7 +259,6 @@
                     "lng": "-87.6660855",
                     "address": "1501 W. Randolph St., 60607",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/union-park-pickleball-courts",
                     "title": "Union Park"
                 },
@@ -298,7 +267,6 @@
                     "lng": "-87.688922967702",
                     "address": "6601 N. Western Ave, 60645",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/warren-park-pickleball-courts",
                     "title": "Warren Park"
                 },
@@ -307,7 +275,6 @@
                     "lng": "-87.6155009",
                     "address": "5531 S. King Dr., 60615",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/washington-george-park",
                     "title": "Washington (George) Park"
                 },
@@ -316,7 +283,6 @@
                     "lng": "-87.686551141249",
                     "address": "2333 W SUNNYSIDE AVE, 60625",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/welles-park-pickleball-courts-0",
                     "title": "Welles Park"
                 },
@@ -325,7 +291,6 @@
                     "lng": "-87.759491801262",
                     "address": "4630 N. Milwaukee Ave., 60630",
                     "location_type": "Indoor",
-                    "provider": "Park District",
                     "link": "https://www.chicagoparkdistrict.com/parks-facilities/wilson-park-pickleball-courts",
                     "title": "Wilson Park"
                 }
@@ -334,13 +299,9 @@
         "lat": "",
         "lng": "",
         "location_type": "",
-        "title": "",
-        "short": "",
-        "long": "",
-        "cost": "",
-        "link": "",
         "address": "",
         "provider": "",
-        "location_type": ""
+        "location_type": "",
+        "title": ""
     }
 }

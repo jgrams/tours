@@ -1,0 +1,15 @@
+{{- define "map-script" }} 
+    {{ partial "scripts/map-javascript-loader.html" . }}
+{{- end }} 
+{{ define "main" }}
+    <h1>{{.Title}}</h1>
+    {{.Content}}
+    {{ partial "maps/map" }}
+    {{ range .Pages }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ .Content }}
+      {{ with .Params.srcMap }}
+        {{ partial "maps/actions/add-layer-to-map.js" . }}
+      {{ end }}
+{{ end }}
+{{ end }}

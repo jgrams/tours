@@ -1,0 +1,20 @@
+{{ partial "maps/empty-map-location" . }}
+<div id="map"></div>
+<script>
+  const mapOptions = {
+    scrollWheelZoom: false
+  }
+  var map = L.map("map", mapOptions);
+  function populateMap(mapData) {
+    map.setView(
+      [mapData.initialLocation.lat, mapData.initialLocation.lng],
+      mapData.initialLocation.zoom
+    );
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+  }
+</script>
+{{ partial "maps/actions/where-am-i.html" . }}
