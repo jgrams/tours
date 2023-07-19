@@ -29,11 +29,11 @@
       let newDiv = createElement(key);
       addLocationDetailDefaults(newDiv, key, index);
       let display = value;
-      switch (key) {
-        case "lng":
-        case "lat":
-          continue;
-        case "link":
+      if ((key == "lat") | (key == "lng")) {
+        // Data not added
+      } else {
+        //Fully Custom Element
+        if (key == "link") {
           const newLink = document.createElement("a");
           newLink.href = value;
           newLink.target = "_blank";
@@ -42,18 +42,23 @@
           newDiv.appendChild(newLink);
           newDiv.classList.remove("double-width");
           copy.appendChild(newDiv);
-          continue;
-        case "cost":
-          if (value == 0) {
-            display = "Cost: Free";
-          } else {
-            display = `Cost: $${value}`;
+        } else {
+          // update display text
+          if (key == "court_count") {
+            display = "Number Of Courts: " + value;
+          } else if (key == "cost") {
+            if (value == 0) {
+              display = "Cost: Free";
+            } else {
+              display = `Cost: $${value}`;
+            }
+            newDiv.classList.remove("double-width");
           }
-          newDiv.classList.remove("double-width");
-        default:
+          // default case
           const newContent = document.createTextNode(display);
           newDiv.appendChild(newContent);
           copy.appendChild(newDiv);
+        }
       }
     }
     currentLocationsContainer.appendChild(copy);

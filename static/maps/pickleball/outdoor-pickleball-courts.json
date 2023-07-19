@@ -1,0 +1,41 @@
+{
+    "initialLocation": {
+        "lat": "41.786417052590345",
+        "lng": "-87.62901306152345",
+        "zoom": "12"
+    },
+    "locations": [
+        {
+            "title": "Brooks (Gwendolyn) Park",
+            "lat": "41.811803341526",
+            "lng": "-87.599819898605",
+            "address": "4542 S. Greenwood Ave., 60653",
+            "court_count": 4,
+            "link": "https://www.chicagoparkdistrict.com/parks-facilities/brooks-gwendolyn-park"
+        },
+        {
+            "title": "Cosme (Margaret) Park",
+            "lat": "41.72677388343238",
+            "lng": "-87.66778574750046",
+            "address": "9201 S. Longwood Dr., 60620",
+            "court_count": 1,
+            "link": "https://www.chicagoparkdistrict.com/parks-facilities/cosme-margaret-park"
+        },
+        {
+            "lat": "41.8411442",
+            "title": "McGuane (John) Park",
+            "lng": "-87.6485994",
+            "address": "2901 S. Poplar Ave., 60608",
+            "court_count": 1,
+            "link": "https://www.chicagoparkdistrict.com/parks-facilities/mcguane-john-park"
+        },
+        {
+            "title": "Tuley (Murray) Park",
+            "lat": "41.7301281",
+            "lng": "-87.6112026",
+            "address": "501 E. 90th Pl., 60619",
+            "court_count": 6,
+            "link": "https://www.chicagoparkdistrict.com/parks-facilities/tuley-murray-park"
+        }
+    ]
+}

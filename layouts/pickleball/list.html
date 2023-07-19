@@ -8,7 +8,7 @@
     {{ range .Pages }}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       {{ .Content }}
-      {{ with .Params.srcMap }}
+      {{ with .Params.srcLink }}
         {{ partial "maps/actions/add-layer-to-map.js" . }}
       {{ end }}
 {{ end }}
